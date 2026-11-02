@@ -1,10 +1,22 @@
 # Multica Engineer Practices
 
-A Multica starter with **nine agent roles, five squad presets, and twelve method skills** for research, analysis, design, and software delivery.
+A reusable **Multica multi-agent workflow starter** with **nine agent roles, five squad presets, and twelve method skills** for research, data analysis, system design, and software delivery.
 
-Give a clear task directly to its specialist. For work that needs coordination, assign it to a squad: **Lead chooses who works next, sends a focused brief, and evaluates what comes back.** Specialists join for a concrete contribution.
+Give a clear task directly to a specialist, or use a squad when work needs coordination: **Lead chooses who works next, sends a focused brief, and evaluates what comes back.** Specialists contribute to a defined part of the task.
 
-[Agent triggers](#who-gets-triggered) · [Role selection](#what-makes-lead-select-a-role) · [Squad rosters](#squad-rosters) · [Setup](#install-and-test-a-fresh-workspace)
+This repository provides reusable agent, skill, and squad configuration plus setup tools and examples. **Multica and the selected runtime execute agent runs**; this repository does not include a model or a hosted agent service.
+
+[Quick overview](#quick-overview) · [Agent triggers](#who-gets-triggered) · [Role selection](#what-makes-lead-select-a-role) · [Squad rosters](#squad-rosters) · [Setup](#install-and-test-a-fresh-workspace)
+
+## Quick overview
+
+| Question | Answer |
+| --- | --- |
+| What is it? | A Multica starter kit for coordinating AI agent work through individual specialists or reusable squads. |
+| What work does it cover? | Research and paper review, data analysis, engineering design, and software delivery. |
+| What is included? | Nine agent roles, five squad presets, twelve method skills, setup and validation tools, and worked examples. |
+| What do I need to run it? | An authenticated Multica CLI, a selected workspace, and a configured runtime. See [fresh-workspace setup](docs/new-workspace-pilot.md). |
+| How do I verify it? | Setup checks configuration; a live pilot is needed to verify actual agent routing and behavior. See [validation limits](VALIDATION.md). |
 
 ## Who gets triggered?
 
