@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1125.5962499999998 962.1199999999999" width="1125.5962499999998" height="962.1199999999999" style="--bg:#ffffff;--fg:#1f2328;--line:#d1d9e0;--accent:#0969da;--muted:#59636e;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="A" data-to="B" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="404.05899999999997,76.9 404.05899999999997,116.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="B" data-to="C" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="404.05899999999997,153.8 404.05899999999997,193.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="C" data-to="D" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="404.05899999999997,230.70000000000002 404.05899999999997,270.70000000000005" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D" data-to="E" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="PASS" points="360.525,401.302 360.525,456.8360000000001 145.449,456.8360000000001 145.449,529.1360000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D" data-to="F" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="BLOCKED" points="404.05899999999997,444.836 404.05899999999997,671.1200000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D" data-to="G" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="FAIL" points="447.59299999999996,401.302 447.59299999999996,456.836 654.662,456.836 654.662,529.136" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="G" data-to="H" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="0 or 1" points="622.1813333333333,691.5393333333333 622.1813333333333,736.02 511.27799999999996,736.02 511.27799999999996,808.3199999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="G" data-to="I" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="2 or more" points="687.1426666666666,691.5393333333334 687.1426666666666,736.02 798.0459999999998,736.02 798.0459999999998,808.3199999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="I" data-to="J" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="798.0459999999998,845.2199999999999 798.0459999999998,865.22 645.5847499999999,865.22 645.5847499999999,885.22" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="I" data-to="K" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="798.0459999999998,845.2199999999999 798.0459999999998,865.22 950.5072499999999,865.22 950.5072499999999,885.22" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="D" data-to="E" data-label="PASS">
+  <rect x="121.949" y="463.8360000000001" width="46.162" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="145.03" y="478.9860000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">PASS</text>
+</g>
+<g class="edge-label" data-from="D" data-to="F" data-label="BLOCKED">
+  <rect x="370.05899999999997" y="605.8200000000002" width="67.546" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="403.832" y="620.9700000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">BLOCKED</text>
+</g>
+<g class="edge-label" data-from="D" data-to="G" data-label="FAIL">
+  <rect x="633.662" y="463.836" width="41.41" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="654.3670000000001" y="478.986" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">FAIL</text>
+</g>
+<g class="edge-label" data-from="G" data-to="H" data-label="0 or 1">
+  <rect x="490.77799999999996" y="743.02" width="40.221999999999994" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="510.88899999999995" y="758.17" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">0 or 1</text>
+</g>
+<g class="edge-label" data-from="G" data-to="I" data-label="2 or more">
+  <rect x="767.0459999999998" y="743.02" width="61.605999999999995" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="797.8489999999998" y="758.17" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">2 or more</text>
+</g>
+<g class="node" data-id="A" data-label="Lead dispatches scoped work, then stops" data-shape="rectangle">
+  <rect x="261.9305" y="40" width="284.25699999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="404.05899999999997" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Lead dispatches scoped work, then stops</text>
+</g>
+<g class="node" data-id="B" data-label="Owner returns candidate and evidence" data-shape="rectangle">
+  <rect x="269.711" y="116.9" width="268.6959999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="404.05899999999997" y="135.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Owner returns candidate and evidence</text>
+</g>
+<g class="node" data-id="C" data-label="Required reviewer returns verdict and findings" data-shape="rectangle">
+  <rect x="250.8155" y="193.8" width="306.48699999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="404.05899999999997" y="212.25" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Required reviewer returns verdict and findings</text>
+</g>
+<g class="node" data-id="D" data-label="Lead routes result" data-shape="diamond">
+  <polygon points="404.05899999999997,270.70000000000005 491.12699999999995,357.76800000000003 404.05899999999997,444.836 316.991,357.76800000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="404.05899999999997" y="357.76800000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Lead routes result</text>
+</g>
+<g class="node" data-id="E" data-label="Next authorized step or finish" data-shape="rectangle">
+  <rect x="40" y="529.1360000000002" width="210.898" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="145.449" y="547.5860000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Next authorized step or finish</text>
+</g>
+<g class="node" data-id="F" data-label="Wait for named condition, then resume" data-shape="rectangle">
+  <rect x="274.898" y="671.1200000000001" width="258.32199999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="404.05899999999997" y="689.5700000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Wait for named condition, then resume</text>
+</g>
+<g class="node" data-id="G" data-label="Failed repair rounds?" data-shape="diamond">
+  <polygon points="654.662,529.136 752.104,626.578 654.662,724.02 557.22,626.578" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="654.662" y="626.578" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Failed repair rounds?</text>
+</g>
+<g class="node" data-id="H" data-label="Targeted repair, then affected verification" data-shape="rectangle">
+  <rect x="370.261" y="808.3199999999999" width="282.0339999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="511.27799999999996" y="826.77" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Targeted repair, then affected verification</text>
+</g>
+<g class="node" data-id="I" data-label="Report evidence and next decision" data-shape="rectangle">
+  <rect x="676.2949999999998" y="808.3199999999999" width="243.50199999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="798.0459999999998" y="826.77" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Report evidence and next decision</text>
+</g>
+<g class="node" data-id="J" data-label="Different approach within scope and budget" data-shape="rectangle">
+  <rect x="499.7512499999999" y="885.22" width="291.6669999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="645.5847499999999" y="903.6700000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Different approach within scope and budget</text>
+</g>
+<g class="node" data-id="K" data-label="Same approach requires user steering" data-shape="rectangle">
+  <rect x="815.4182499999998" y="885.22" width="270.178" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="950.5072499999999" y="903.6700000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Same approach requires user steering</text>
+</g>
+</svg>

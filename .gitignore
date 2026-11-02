@@ -1,0 +1,20 @@
+build/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+*.local.json
+*.local.yaml
+/.multica
+.DS_Store
+
+*.local.toml
+.quality-evidence/
+.metrics/
+
+# Local archives, audits, workspace settings and project evidence.
+/obsolete/
+*.pem
+*.key
+credentials*.json

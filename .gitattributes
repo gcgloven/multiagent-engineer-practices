@@ -1,0 +1,7 @@
+# Keep local material out of Git source archives even if staged accidentally.
+/obsolete export-ignore
+/.multica export-ignore
+/build export-ignore
+/setup.local.toml export-ignore
+.env export-ignore
+.env.* export-ignore

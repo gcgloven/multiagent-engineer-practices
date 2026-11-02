@@ -1,0 +1,11 @@
+flowchart TB
+  A["Lead dispatches scoped work, then stops"] --> B["Owner returns candidate and evidence"]
+  B --> C["Required reviewer returns verdict and findings"]
+  C --> D{"Lead routes result"}
+  D -->|PASS| E["Next authorized step or finish"]
+  D -->|BLOCKED| F["Wait for named condition, then resume"]
+  D -->|FAIL| G{"Failed repair rounds?"}
+  G -->|0 or 1| H["Targeted repair, then affected verification"]
+  G -->|2 or more| I["Report evidence and next decision"]
+  I --> J["Different approach within scope and budget"]
+  I --> K["Same approach requires user steering"]
