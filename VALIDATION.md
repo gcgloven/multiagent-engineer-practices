@@ -13,6 +13,8 @@ python3 -B -m unittest discover -s examples/code-to-reliable-delivery -p 'test_*
 python3 -B scripts/prepare.py
 ```
 
+The same offline checks run in the [GitHub Actions validation workflow](.github/workflows/validation.yml) for pull requests targeting `main` and pushes to `main`.
+
 The checks cover complete resource packaging, deterministic archives, unsafe-path rejection, installer reconciliation, setup configuration, ticket seeding and launch safeguards, and quality-evidence interpretation. The teaching examples cover cookbook quantity parsing and an offline article-preview compiler using fictional inputs.
 
 ## Local verification — 2026-10-30
