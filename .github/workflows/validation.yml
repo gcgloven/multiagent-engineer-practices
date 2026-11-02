@@ -1,0 +1,39 @@
+name: Validation
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-validation:
+    name: Offline validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Run script suite
+        run: python -B -m unittest discover -s scripts -p 'test_*.py' -v
+
+      - name: Run analytics example suite
+        run: python -B -m unittest discover -s examples/analytics-to-engineering -p 'test_*.py' -v
+
+      - name: Run delivery example suite
+        run: python -B -m unittest discover -s examples/code-to-reliable-delivery -p 'test_*.py' -v
+
+      - name: Prepare generated bundle
+        run: python -B scripts/prepare.py

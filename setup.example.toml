@@ -1,0 +1,23 @@
+# Copy to setup.local.toml. Run on the actual daemon host/service account.
+[multica]
+workspace_id = "REPLACE-WITH-NEW-WORKSPACE-UUID"
+runtime_id = "REPLACE-WITH-RUNTIME-UUID-FROM-THAT-WORKSPACE"
+# profile = "lan"
+squad_profiles = ["research-engineering", "open-research", "analytics-engineering", "software-delivery", "engineering-design"]
+update_existing = false
+
+[host]
+# This is an explicit placement declaration, not something inferred from an ID.
+local_runtime_ids = ["REPLACE-WITH-RUNTIME-UUID-FROM-THAT-WORKSPACE"]
+tool_root = ".multica/tools"
+research = true
+
+# Optional role overrides; every ID must belong to the selected workspace and
+# this host. Bootstrap remote hosts separately; do not claim local checks there.
+[runtime_map]
+# software-engineer = "ANOTHER-LOCAL-RUNTIME-UUID"
+
+[native]
+# Optional explicit skill discovery directories for independently started CLIs.
+# Existing directories are compared; replacements require update_existing=true.
+skill_directories = []

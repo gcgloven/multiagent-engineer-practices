@@ -1,0 +1,12 @@
+{
+  "format": 1,
+  "ub_mode_source": "https://github.com/unclebob/ub-mode/tree/57a8bdd28e45ed41900ace0bafa2ff76dd9ed70f",
+  "tools": {
+    "crapper": {"repository": "https://github.com/unclebob/crapper.git", "commit": "6fd92c4c9bcc56efb64a2f8743d5a2993bcfd42d"},
+    "dryer": {"repository": "https://github.com/unclebob/dryer.git", "commit": "66ff6d21a42c04afcad89c78a80066176d1294b0"},
+    "mutator": {"repository": "https://github.com/unclebob/mutator.git", "commit": "a5a0cb803b66e0cdb8bf471b3b08af701d424a41"}
+  },
+  "optional": {
+    "uml-viewer": {"repository": "https://github.com/unclebob/uml-viewer", "commit": "f65dafe93b3cb1b4e6bb02dbe41503ed05bd9ebf", "installed": false, "reason": "Desktop Java/Clojure and companion integration require separate configuration."}
+  }
+}
