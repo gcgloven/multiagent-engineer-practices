@@ -111,7 +111,7 @@ class InstallerTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn('read-back passed', result.stdout)
         db = self.state()
-        self.assertEqual((len(db['skills']), len(db['agents']), len(db['squads'])), (11, 9, 1))
+        self.assertEqual((len(db['skills']), len(db['agents']), len(db['squads'])), (12, 9, 1))
         self.assertEqual([agent['name'] for agent in db['agents']], ['Lead', 'Scout', 'Paper Reviewer', 'Analyst', 'Systems Engineer', 'Software Engineer', 'Test & Code Review Engineer', 'Verifier', 'Product Manager'])
         self.assertEqual(len(db['squads'][0]['members']), 8)
         self.assertEqual(len(db['agents'][0]['skills']), 1)
@@ -157,7 +157,7 @@ class InstallerTests(unittest.TestCase):
                 squad = db['squads'][-1]
                 self.assertEqual({m['member_id'] for m in squad['members']}, {ids[n] for n in names})
                 self.assertEqual(squad['instructions'], (ROOT / f'build/multica/squads/{profile}.md').read_text())
-                self.assertEqual((len(db['agents']), len(db['skills'])), (9, 11))
+                self.assertEqual((len(db['agents']), len(db['skills'])), (9, 12))
                 if profile == 'engineering-design':
                     self.assertEqual(squad['name'], 'Engineering Design Squad')
                     self.assertIn('Product Manager (optional dispatch)', result.stdout)
@@ -261,7 +261,7 @@ class InstallerTests(unittest.TestCase):
         result = self.run_installer('--update-existing', '--apply')
         self.assertEqual(result.returncode, 0, result.stderr)
         first = self.state()
-        self.assertEqual((len(first['skills']), len(first['agents']), len(first['squads'])), (11, 9, 1))
+        self.assertEqual((len(first['skills']), len(first['agents']), len(first['squads'])), (12, 9, 1))
         self.assertEqual(first['skills'][0]['id'], before['skills'][0]['id'])
         self.assertEqual(first['agents'][0]['id'], before['agents'][0]['id'])
         result = self.run_installer('--update-existing', '--apply')
@@ -282,7 +282,7 @@ class InstallerTests(unittest.TestCase):
         for agent in legacy['agents']:
             agent['skills'] = [skill_id for skill_id in agent['skills'] if skill_id not in new_skill_ids]
         legacy['squads'][0]['members'] = [m for m in legacy['squads'][0]['members'] if m['member_id'] != pm_id]
-        self.assertEqual((len(legacy['agents']), len(legacy['skills'])), (8, 9))
+        self.assertEqual((len(legacy['agents']), len(legacy['skills'])), (8, 10))
 
         # Reuse cannot silently change an older prompt or add its new bindings.
         for defect in ('old-prompt', 'missing-new-bindings'):
@@ -302,7 +302,7 @@ class InstallerTests(unittest.TestCase):
         result = self.run_installer('--update-existing', '--apply')
         self.assertEqual(result.returncode, 0, result.stderr)
         after = self.state()
-        self.assertEqual((len(after['agents']), len(after['skills']), len(after['squads'])), (9, 11, 1))
+        self.assertEqual((len(after['agents']), len(after['skills']), len(after['squads'])), (9, 12, 1))
         for kind in ('agents', 'skills', 'squads'):
             old_ids = {item['name']: item['id'] for item in legacy[kind]}
             new_ids = {item['name']: item['id'] for item in after[kind]}
@@ -391,7 +391,7 @@ class InstallerTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn('read-back passed', result.stdout)
         db = self.state()
-        self.assertEqual((len(db['skills']), len(db['agents']), len(db['squads'])), (11, 9, 1))
+        self.assertEqual((len(db['skills']), len(db['agents']), len(db['squads'])), (12, 9, 1))
         skill = next(x for x in db['skills'] if x['name'] == 'review-paper')
         self.assertEqual(skill['id'], 'existing')
         self.assertNotEqual(skill['content'], 'old')
@@ -441,7 +441,7 @@ class InstallerTests(unittest.TestCase):
         first = self.run_installer('--squad-profile', 'all', '--apply')
         self.assertEqual(first.returncode, 0, first.stderr)
         before = self.state()
-        self.assertEqual((len(before['agents']), len(before['skills']), len(before['squads'])), (9, 11, 5))
+        self.assertEqual((len(before['agents']), len(before['skills']), len(before['squads'])), (9, 12, 5))
         again = self.run_installer('--squad-profile', 'all', '--update-existing', '--apply')
         self.assertEqual(again.returncode, 0, again.stderr)
         self.assertEqual(self.state(), before)

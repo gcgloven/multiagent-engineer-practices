@@ -47,7 +47,7 @@ class SetupTests(unittest.TestCase):
         with patch.object(setup.bootstrap_tools, 'install', return_value={'state': 'host-checked'}):
             self.invoke('--apply')
             before = json.loads(self.db.read_text())
-            self.assertEqual((len(before['agents']), len(before['skills']), len(before['squads'])), (9, 11, 2))
+            self.assertEqual((len(before['agents']), len(before['skills']), len(before['squads'])), (9, 12, 2))
             self.invoke('--apply')
             self.assertEqual(json.loads(self.db.read_text()), before)
         with patch.object(setup.bootstrap_tools, 'doctor', return_value={'state': 'host-checked'}):
@@ -85,7 +85,7 @@ class SetupTests(unittest.TestCase):
         backups = set(backup_root.glob('*/ub-coding/SKILL.md')) - before
         self.assertEqual(len(backups), 1)
         self.assertEqual(backups.pop().read_text(), 'custom instruction')
-        self.assertEqual(len(list(base.iterdir())), 11)
+        self.assertEqual(len(list(base.iterdir())), 12)
         self.assertIn('name: ub-coding', (base / 'ub-coding/SKILL.md').read_text())
 
 
