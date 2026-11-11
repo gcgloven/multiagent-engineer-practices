@@ -31,6 +31,10 @@ For an inquiry checkpoint, record: question as currently understood → new evid
 
 For a review loop, keep one durable state entry:
 
+For a small software task requiring review, default to one scoped review, one consolidated repair batch if needed, and one closure review of repairs and affected regressions. Record a different authorized allowance before dispatch when justified. The batch plus closure review consumes one total repair cycle even when every original finding closes and a new one appears. At the allowance boundary, return unresolved findings and a concrete human decision; do not renew the allowance on a new finding or activation. Preserve the separate same-problem history below.
+
+Maintain one current [software review record](../docs/software-review-handoff.md#current-review-record) here or in the linked development issue. Show candidate/intended behavior, each finding's evidence and affected criterion, repair/closure, completed/unchecked areas, risks, resources/cycles consumed, and recommended next decision. Update this record instead of requiring a human to reconstruct handoffs across issues. Use short deltas for returns and link detailed evidence.
+
 `problem/FINDING ID | affected AC/BR/OP | candidate/evidence | active owner/run | failed repair rounds | approach | budget remaining | next action/resumption condition`
 
 Initial review discovers findings. A repair round is an attempted fix followed by verification of the same problem. Environment failures are blockers, not invented evidence of a failed algorithm. Preserve prior attempts when changing approaches.

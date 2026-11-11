@@ -21,6 +21,12 @@ Use Product Manager to explain an accepted design, demonstrate the intended jour
 
 Use the canonical prefixes for every applicable coordinated goal, story, requirement, rule, criterion, metric, question, risk, architecture decision, and review finding. Relevance determines which records exist, not whether arbitrary replacement names may be used. Lead includes the definitions and exact referenced content needed in each worker assignment; specialist profiles do not carry the vocabulary as permanent behavior.
 
+## Consolidated review and human handoff
+
+Use the shared total-cycle allowance: for a small task, one scoped review, one consolidated repair batch if needed, then closure and affected-regression review. Author self-checks happen before handoff. The reviewer collects findings across the agreed reviewable scope; an early blocking prerequisite must identify unchecked areas. New findings do not renew the allowance. At the stop boundary, return one evidence-backed decision with unresolved defects and unchecked areas instead of another automatic development round. Preserve the same-problem repair history separately.
+
+Maintain one current review record in this task: candidate and intended behavior, finding/criterion/evidence, repair and closure, checks and unchecked areas, remaining risks, consumed resources/cycles and recommended next decision. Keep detailed logs linked and send only changed evidence at each handoff. See the [software review and handoff guide](../docs/software-review-handoff.md) for the record and live acceptance cases.
+
 ## Readiness and release
 
 Name the actual target: local prototype, integrated pilot, internal service, or live production operation. Evaluate the relevant reliability, security, data handling, observability, operational ownership, rollback/recovery, and deployment evidence for that target. Explain missing readiness evidence without claiming a production outcome from unit tests alone.

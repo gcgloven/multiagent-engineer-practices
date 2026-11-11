@@ -76,6 +76,12 @@ For multiple parallel outputs, the join advances only when every required output
 
 Before marking the parent ready, use a small completion table: requested output → current local artifact/inline result → actual evidence → complete/partial/blocked → next owner. Preserve explicitly descoped work with its decision. A review checkpoint on a partial result is possible, but must say partial and must not close the broader request. Finish substantial research with an integrated discussion/study summary and substantial design with an understandable design document; do not ask the human to reconstruct the answer from dispatch comments.
 
+## Small software tasks: batch findings and stop the whole loop
+
+Use the [software review and handoff guide](software-review-handoff.md) for a small task's default: author implementation and self-checks, one complete scoped review, one consolidated repair batch if needed, then closure checks and affected regressions. Lead still follows the configured dispatch/callback protocol, but does not repeat each worker's full report or add review-of-review. Update one current record in the development issue.
+
+Count the batch plus closure review as one repair cycle, independently of unsuccessful repairs of the same defect. Lead checks the total allowance before routing a FAIL; the table's same-problem alternative-approach option does not override that allowance. At the default boundary, unresolved or newly discovered blockers return as one concrete human decision; do not dispatch another cycle without an authorized extension. A larger task may have an explicit different allowance established before dispatch. Budget expiry never turns a defect into PASS. A prerequisite that prevents completing review requires named unchecked areas and a resumption condition.
+
 ## One repair example
 
 The labels and evidence below are illustrative, not measured results.
