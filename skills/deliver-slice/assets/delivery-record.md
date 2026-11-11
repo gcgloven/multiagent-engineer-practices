@@ -44,12 +44,17 @@ Extend the authoritative local project artifact or caller-selected record. Keep 
 
 ## Review and repair
 
-| Finding | Evidence/consequence | Owner | Closure check | Attempt history, if assigned | State |
+| Finding / classification | Affected criterion and evidence/consequence | Owner | Repair / candidate | Closure check and result | Attempt history / state |
 | --- | --- | --- | --- | --- | --- |
 
 - Current approach, scope, and remaining budget:
+- Total repair-cycle allowance, consumed cycles and remaining cycles (separate from failed repairs of the same finding):
+- Review scope completed; unchecked areas, reason and resumption condition:
+- Remaining risks and consequential contract decisions:
 - Next action or decision:
 - Readiness judgment: candidate + target + reviewer/decision owner + evidence links:
 - Current artifact index and revision delta; superseded evidence retained by reference:
+
+Use this as the current human-readable record in the development issue or its linked accessible artifact; do not create a duplicate ledger. Classify demonstrated defects, suspicions requiring investigation, evidence gaps, conflicting expectations and optional improvements separately. Preserve prior candidate evidence by link, and return only changed evidence and decisions at each handoff. At the assigned total-cycle boundary, report unresolved defects and a concrete next decision without claiming acceptance or silently extending the allowance.
 
 Keep workflow status with the owner assigned by the caller. Do not advance a parent phase or issue solely because this implementation/review step finished, and do not treat unspecified quality targets as accepted. Link the current record and explain decisive results in the chat. Add a focused code/data excerpt, summary table, or visual when it makes the evidence easier to assess; do not attach a full log or report instead of the explanation.
